@@ -1,0 +1,17 @@
+[package]
+name = "hello-map-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hello-map-common = { path = "../hello-map-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "hello-map"
+path = "src/main.rs"
